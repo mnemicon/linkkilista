@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Kaikki linkit</title>
+
+    </head>
+    <body>
+        <h1>Linkkilistasivu</h1>
+        
+        <table class="">   <!-- tänne voisi lisätä css-muotoilun-->
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Linkki</th>
+                    <th>Otsikko</th>
+                    <th>Kuvaus</th>
+                    <th>Avainsana</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="linkki : ${linkit}">
+<!--                <td><a th:href="@{/{linkki}(linkki=${linkki.id})}"></a></td>-->
+                    <td th:text="${linkki.id}">Linkin ID</td>
+                    <td><a th:href="@{https://{linksu}(linksu=${linkki.osoite})}" th:target="_blank" th:text="${linkki.osoite}">Linkin osoite</a></td>
+                    <td th:text="${linkki.kuvaus}">Otsikko</td>
+                    <td th:text="${linkki.hakusana}">Linkin kuvaus</td>
+                    <td th:text="${linkki.tyyppi}">Linkin avainsana</td>
+                </tr>
+                </tbody>
+        </table>
+        <br/>
+            <a th:href="@{/}">Etusivulle</a>
+    </body>
+</html>

@@ -1,10 +1,10 @@
-package harjoitus.linkit;
+package harjoitus.linkkilista;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class LinkitApplicationTests {
+class LinkkilistaApplicationTests {
 
 	@Test
 	void contextLoads() {

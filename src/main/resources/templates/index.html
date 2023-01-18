@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- oma tekemä indeksisivu  -->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Linkkilista</title>
+    </head>
+    <body>
+        <h1>Etusivu</h1>
+        <a th:href="@{/links}">Näytä linkit</a>
+        <a th:href="@{/newlink}">Lisää linkki</a>
+    </body>
+</html>
+
+
+
+
+
+
+<!--
+    <body>
+        <h1>Linkkilistasivu</h1>
+        
+        <a th:href="@{/links}">Näytä linkit</a>
+        <a th:href='@{/newlink}'>Lisää linkki</a>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Linkki</th>
+                    <th>Kuvaus</th>
+                    <th>Kuvaus</th>
+                    <th>Kuvaus</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="linkki : ${linkit}">
+                <td><a th:href="@{/{linkki}(linkki=${linkki.id})}"></a></td>
+                    <td th:text="${linkki.osoite}">Linkin osoite</td>
+                    <td th:text="${linkki.kuvaus}">Linkin kuvaus</td>
+                    <td th:text="${linkki.hakusana}">Linkin kuvaus</td>
+                    <td th:text="${linkki.tyyppi}">Linkin kuvaus</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <h1>Lisää linkki, anna linkin tiedot</h1>
+        
+        <form th:action="@{/}" method="POST">
+            <span>Linkki:</span>
+            <input type="text" name="osoite"/>
+            <span>Kuvaus:</span>
+            <input type="text" name="kuvaus"/>
+            <span>Hakusana:</span>
+            <input type="text" name="hakusana"/>
+            <span>Tyyppi:</span>
+            <input type="text" name="tyyppi"/>
+            <input type="submit" value="Lisää:"/>
+        </form>
+    </body>-->

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Linkkilista</title>
+    </head>
+    <body>
+                <h1>Lisää linkki, anna linkin tiedot</h1>
+        
+        <form th:action="@{/newlink}" method="POST">
+            <span>Linkki:</span>
+            <input type="text" name="osoite"/>
+            <span>Kuvaus:</span>
+            <input type="text" name="kuvaus"/>
+            <span>Hakusana:</span>
+            <input type="text" name="hakusana"/>
+            <span>Tyyppi:</span>
+            <input type="text" name="tyyppi"/>
+            <input type="submit" value="Lisää:"/>
+        </form>
+            <br/>
+            <a th:href="@{/}">Etusivulle</a>
+    </body>
+</html>
